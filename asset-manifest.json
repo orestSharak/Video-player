@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/video-player/static/css/main.58dbc63f.css",
-    "main.js": "/video-player/static/js/main.7add0415.js",
-    "static/js/787.e047b795.chunk.js": "/video-player/static/js/787.e047b795.chunk.js",
-    "static/media/bootstrap-icons.woff?": "/video-player/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
-    "static/media/bootstrap-icons.woff2?": "/video-player/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
-    "index.html": "/video-player/index.html",
-    "main.58dbc63f.css.map": "/video-player/static/css/main.58dbc63f.css.map",
-    "main.7add0415.js.map": "/video-player/static/js/main.7add0415.js.map",
-    "787.e047b795.chunk.js.map": "/video-player/static/js/787.e047b795.chunk.js.map"
+    "main.css": "/Video-player/static/css/main.02039d78.css",
+    "main.js": "/Video-player/static/js/main.1af973ae.js",
+    "static/js/787.e047b795.chunk.js": "/Video-player/static/js/787.e047b795.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/Video-player/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/Video-player/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "index.html": "/Video-player/index.html",
+    "main.02039d78.css.map": "/Video-player/static/css/main.02039d78.css.map",
+    "main.1af973ae.js.map": "/Video-player/static/js/main.1af973ae.js.map",
+    "787.e047b795.chunk.js.map": "/Video-player/static/js/787.e047b795.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58dbc63f.css",
-    "static/js/main.7add0415.js"
+    "static/css/main.02039d78.css",
+    "static/js/main.1af973ae.js"
   ]
 }
