@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/video-player/static/css/main.bc546bda.css",
-    "main.js": "/video-player/static/js/main.a07b88f6.js",
+    "main.js": "/video-player/static/js/main.beecb94c.js",
     "static/js/787.a9ac9540.chunk.js": "/video-player/static/js/787.a9ac9540.chunk.js",
     "static/media/bootstrap-icons.woff?": "/video-player/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/video-player/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
@@ -9,11 +9,11 @@
     "static/media/logo-black-freeky.png": "/video-player/static/media/logo-black-freeky.48d8cf9bf3c25c130212.png",
     "index.html": "/video-player/index.html",
     "main.bc546bda.css.map": "/video-player/static/css/main.bc546bda.css.map",
-    "main.a07b88f6.js.map": "/video-player/static/js/main.a07b88f6.js.map",
+    "main.beecb94c.js.map": "/video-player/static/js/main.beecb94c.js.map",
     "787.a9ac9540.chunk.js.map": "/video-player/static/js/787.a9ac9540.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc546bda.css",
-    "static/js/main.a07b88f6.js"
+    "static/js/main.beecb94c.js"
   ]
 }
