@@ -1,0 +1,125 @@
+.create-playlist-modal {
+    display: flex;
+    height: 300px;
+    transition: all .2s ease;
+    z-index: 10001;
+    position: fixed;
+    padding: 0 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom:-100%;
+}
+
+.create-playlist-mask {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10000;
+    display: none;
+    opacity: 0;
+    transition: opacity .1s .2s ease;
+}
+
+.show-create-playlist-modal {
+    bottom: 65%;
+    transform: translate(-50%, 50%);
+}
+
+
+@media (pointer: none), (pointer: coarse) {
+    .show-create-playlist-modal {
+        bottom: 65%;
+        transform: translate(-50%, calc(100vh - 250px));
+    }
+}
+
+
+.show-create-playlist-mask {
+    display: block;
+    opacity: 1;
+}
+
+.create-playlist-modal-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 10px;
+    color: var(--ct-modal-color);
+    background-color: var(--ct-input-bg);
+    border-radius: 15px;
+    width: 300px;
+}
+
+.create-playlist-modal-item {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.create-playlist-input-label {
+    color: var(--ct-white-color);
+    font-size: 19px;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.create-playlist-input {
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: var(--ct-border-color);
+    transition: all .3s ease;
+    background-color: transparent;
+    color: var(--ct-white-color);
+    width: 100%;
+    padding: 0 0 8px 0;
+}
+
+.create-playlist-input:focus {
+    border-color: var(--ct-blue);
+}
+
+input[type="text"]::placeholder {
+    color: var(--ct-light-grey);
+}
+
+.name-length-section {
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--ct-light-grey);
+}
+
+.edit-name-form {
+    width: 100%;
+    padding:  0 10px;
+    margin-top: 10px;
+}
+
+input[type=submit] {
+    padding:5px 0;
+    background:transparent;
+    border:0 none;
+    cursor:pointer;
+    color: var(--ct-blue);
+    transition: al .3s ease;
+}
+
+input[type=submit]:hover {
+    opacity: .9;
+}
+
+.disabled{
+    cursor:not-allowed !important;
+    color: var(--ct-gray-color) !important;
+}
+.disabled:hover {
+    opacity: 1;
+}
+
+

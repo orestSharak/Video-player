@@ -1,0 +1,30 @@
+.header {
+    position: absolute;
+    top: 30px;
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-btn, .back-btn, .menu-btn {
+    color: var(--ct-white-color);
+    font-size: 17px;
+    transition: all .2s ease;
+}
+
+.menu-btn {
+    margin-right: 25px;
+}
+
+.search-btn:hover, .back-btn:hover, .menu-btn:hover {
+    opacity: .7;
+}

@@ -1,0 +1,20 @@
+.cover-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, rgba(25, 26, 30, .9) 0%, rgba(25, 26, 30, .5) 25%, rgba(25, 26, 30, .2) 55%, transparent 100%);
+}
+.cover {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(2);
+}

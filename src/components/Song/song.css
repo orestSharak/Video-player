@@ -1,0 +1,84 @@
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.song-title {
+    color: var(--ct-white-color);
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.error {
+    color:var(--ct-error);
+}
+
+.artist-name {
+    color: var(--ct-gray-color);
+    font-size: 0.7rem;
+
+}
+
+.artist-name, .song-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.kebab {
+    position: relative;
+    color: var(--ct-white-color);
+    transition: all .3s ease;
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+
+.kebab:hover {
+    opacity: .7;
+}
+.kebab-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.thumb-wrapper {
+    position: relative;
+}
+
+.thumb-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: brightness(50%)
+}
+
+.thumb-icon {
+    position: absolute;
+    color: var(--ct-white-color);
+    top: 50%;
+    left: 23px;
+    transform: translate(0, -50%);
+    font-size: 20px;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+

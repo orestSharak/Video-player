@@ -1,0 +1,17 @@
+:root {
+    --ct-white-color: #f3f3f3;
+    --ct-dark-color: #f3f3f3;
+    --ct-dark-bg-color: #191a1e;
+    --ct-icon-color: #a1a1a1;
+    --ct-gray-color: #828387;
+    --ct-gray-color-hover: #252629;
+    --ct-modal-color: #dee2e6;
+    --ct-modal-bg: #343a40;
+    --ct-form-bg: #343a40;
+    --ct-input-bg: #1c1d21;
+    --ct-error: #ff0000;
+    --ct-light-grey: #d3d3d3;
+    --ct-black: #000;
+    --ct-border-color: #2f3032;
+    --ct-blue: #0d6efdb8;
+}
