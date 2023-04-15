@@ -1,7 +1,7 @@
 .modal {
     display: flex;
     max-width: 580px;
-    height: 200px;
+    height: 230px;
     transform: translate(-50%, 100vh);
     transition: all .2s ease;
     z-index: 10001;
@@ -29,7 +29,7 @@
 }
 
 .show-modal {
-    transform: translate(-50%, calc(100vh - 210px));
+    transform: translate(-50%, calc(100vh - 250px));
 }
 
 .show-mask {
