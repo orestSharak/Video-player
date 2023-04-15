@@ -29,12 +29,12 @@
 }
 
 
-/*@media (pointer: none), (pointer: coarse) {*/
-/*    .show-create-playlist-modal {*/
-/*        bottom: 65%;*/
-/*        transform: translate(-50%, calc(100vh - 280px));*/
-/*    }*/
-/*}*/
+@media (pointer: none), (pointer: coarse) {
+    .show-create-playlist-modal {
+        bottom: 65%;
+        transform: translate(-50%, 70%);
+    }
+}
 
 
 .show-create-playlist-mask {
