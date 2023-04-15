@@ -73,7 +73,7 @@ const Modal = ({handleDeleteListItem, handleDeletePlaylist, showModal, toggleMod
             toggleEdit();
           }
         }}/>
-        <div className={showModal ? `modal show-modal ${showName && 'edit'} ` : "modal"}>
+        <div className={showModal ? `modal show-modal ${showName ? 'edit': ''}` : "modal"}>
           <div className="modal-body">
             <div className="modal-item" onClick={() => {
               toggleModal();

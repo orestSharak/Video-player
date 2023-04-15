@@ -29,7 +29,7 @@
 }
 
 .show-modal {
-    transform: translate(-50%, calc(100vh - 250px));
+    transform: translate(-50%, calc(100vh - 285px));
 }
 
 .show-mask {
