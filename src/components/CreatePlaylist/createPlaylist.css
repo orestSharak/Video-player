@@ -32,7 +32,7 @@
 @media (pointer: none), (pointer: coarse) {
     .show-create-playlist-modal {
         bottom: 65%;
-        transform: translate(-50%, 70%);
+        transform: translate(-50%, 100%);
     }
 }
 
