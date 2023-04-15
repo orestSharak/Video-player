@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {useParams} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import YouTube from "react-youtube";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -14,10 +14,18 @@ import Header from "../Header/Header";
 import defaultThumb from '../../img/logo-black-freeky.png'
 import {defaultPlaylists} from "../Page/Page";
 
+
 const Player = () => {
   const {playlistId} = useParams();
 
+
   const initialStateList = JSON.parse(localStorage.getItem("playlist"));
+
+  // only for production, when localStorage has been cleaned
+  if (initialStateList === null) {
+    window.location.href = "https://orestsharak.github.io/video-player/";
+  }
+
   const filteredInitialStateList = initialStateList.length > 0 ? initialStateList.filter(item => parseInt(item.id) === parseInt(playlistId)) : defaultPlaylists.filter(item => parseInt(item.id) === parseInt(playlistId));
   const initialObject = initialStateList.length > 0 ? filteredInitialStateList[0] : defaultPlaylists[0];
   const initialPlaylist = initialObject.list;
@@ -246,7 +254,8 @@ const Player = () => {
   return (
     <>
       <Header toggleForm={toggleForm} showForm={showForm} toggleModal={toggleModal} handlePlay={handlePlay}
-              setIsPlaylistDetailOpen={setIsPlaylistDetailOpen} initialStateList={initialStateList} statePlayer={statePlayer}/>
+              setIsPlaylistDetailOpen={setIsPlaylistDetailOpen} initialStateList={initialStateList}
+              statePlayer={statePlayer}/>
       <Cover backgroundImageUrl={backgroundImageUrl}/>
       <Form showForm={showForm} toggleForm={toggleForm} inputValue={inputValue} setInputValue={setInputValue}
             inputRef={inputRef} isOnList={isOnList}
