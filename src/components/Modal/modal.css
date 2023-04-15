@@ -2,12 +2,13 @@
     display: flex;
     max-width: 580px;
     height: 230px;
-    transform: translate(-50%, 100vh);
     transition: all .2s ease;
     z-index: 10001;
     position: fixed;
     padding: 0 15px;
     left: 50%;
+    transform: translate(-50%, -50%);
+    bottom:-100%;
 
 }
 
@@ -29,7 +30,8 @@
 }
 
 .show-modal {
-    transform: translate(-50%, calc(100vh - 285px));
+    bottom: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .show-mask {
