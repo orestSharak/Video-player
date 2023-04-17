@@ -60,7 +60,7 @@ const Player = () => {
       // eslint-disable-next-line
       const {id, img: playerImg, list: playerList, title} = filteredInitialStateList[0];
       // full size thumb
-      const img = list.length > 0 ? list[0].img.split('hqdefault').join('maxresdefault') : defaultThumb;
+      const img = list.length > 0 ? list[0].img.split('hqdefault').join('mqdefault') : defaultThumb;
       const newObj = {id, img, list, title};
 
       const index = initialStateList.length > 0 ? initialStateList.findIndex(item => parseInt(item.id) === parseInt(playlistId)) : defaultPlaylists.findIndex(item => parseInt(item.id) === parseInt(playlistId))
@@ -112,7 +112,7 @@ const Player = () => {
       const data = await response.json();
       const title = await data.title;
       const thumb = await data.thumbnail_url;
-      const fullSieThumb = thumb.split('hqdefault').join('maxresdefault');
+      const fullSieThumb = thumb.split('hqdefault').join('mqdefault');
       const validUrlRegex = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
 
       const isDublicate = list.some((item) => item.id === videoId);
@@ -175,6 +175,9 @@ const Player = () => {
   };
 
   const handlePlay = (id) => {
+    setIsShuffle(false);
+    handleShufflePlay();
+    
     if (statePlayer === 2) {
       player.playVideo();
       player.unMute();
@@ -189,8 +192,12 @@ const Player = () => {
 
   const handleShufflePlay = () => {
     if (player) {
+      setUrls(list.map((item) => item.id));
+
+      player.playVideoAt(0);
       player.setShuffle(true);
       player.setLoop(true);
+
       player.playVideo();
       player.unMute();
     }
