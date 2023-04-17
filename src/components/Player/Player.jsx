@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import YouTube from "react-youtube";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -99,12 +99,21 @@ const Player = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const inputUrl = inputRef.current.value.includes("watch?")
-        ? inputRef.current.value.trim().split("?v=")
-        : inputRef.current.value.trim().split("/");
-      const videoId = inputRef.current.value.includes("watch?")
-        ? inputUrl[1].split("&")[0]
-        : inputUrl[3];
+      const inputUrlFormatter = () => {
+        if (inputRef.current.value.includes("watch?")) {
+          const preValue = inputRef.current.value.trim().split("?v=");
+          return preValue[1].split("&")[0];
+        } else if (inputRef.current.value.includes("live")) {
+          const preValue = inputRef.current.value.trim().split("live/");
+          const secondPreValue = preValue[1].split("?");
+          return secondPreValue[0];
+        } else {
+          const preValue = inputRef.current.value.trim().split("/");
+          return preValue[3];
+        }
+      };
+
+      const videoId = inputUrlFormatter();
 
       const response = await fetch(
         `https://noembed.com/embed?dataType=json&url=https://www.youtube.com/watch?v=${videoId}`
@@ -175,9 +184,12 @@ const Player = () => {
   };
 
   const handlePlay = (id) => {
-    setIsShuffle(false);
-    handleShufflePlay();
-    
+
+    if (isShuffle) {
+      setIsShuffle(false);
+      handleShufflePlay();
+    }
+
     if (statePlayer === 2) {
       player.playVideo();
       player.unMute();
@@ -194,9 +206,10 @@ const Player = () => {
     if (player) {
       setUrls(list.map((item) => item.id));
 
-      player.playVideoAt(0);
+
       player.setShuffle(true);
       player.setLoop(true);
+      player.playVideoAt(0);
 
       player.playVideo();
       player.unMute();
