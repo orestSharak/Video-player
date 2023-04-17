@@ -46,7 +46,7 @@ const Player = () => {
   const [isError, setIsError] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [info, setInfo] = useState(false);
+  const [info, setInfo] = useState(true);
   const [isPlaylistDetailOpen, setIsPlaylistDetailOpen] = useState(false);
   const [isShuffle, setIsShuffle] = useState(false);
 
