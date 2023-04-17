@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import './page.css';
 import {Link} from "react-router-dom";
 import image from '../../img/logo-transparent.png'
-import defaultImage from '../../img/logo-black-freeky.png'
+import defaultImage from '../../img/logo-round.png'
 
 import CreatePlaylist from "../CreatePlaylist/CreatePlaylist";
 
