@@ -21,11 +21,6 @@ const Player = () => {
 
   const initialStateList = JSON.parse(localStorage.getItem("playlist"));
 
-  // only for production, when localStorage has been cleaned
-  if (initialStateList === null) {
-    window.location.href = "https://orestsharak.github.io/video-player/";
-  }
-
   const filteredInitialStateList = initialStateList.length > 0 ? initialStateList.filter(item => parseInt(item.id) === parseInt(playlistId)) : defaultPlaylists.filter(item => parseInt(item.id) === parseInt(playlistId));
   const initialObject = initialStateList.length > 0 ? filteredInitialStateList[0] : defaultPlaylists[0];
   const initialPlaylist = initialObject.list;
