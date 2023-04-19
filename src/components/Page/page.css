@@ -62,6 +62,8 @@
     border-left-style: solid;
     border-left-color: var(--ct-border-color);
     border-left-width: 1px;
+  /*  for firefox*/
+    scrollbar-width: none;
 }
 
 .play-list-item {
