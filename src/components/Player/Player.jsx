@@ -102,6 +102,9 @@ const Player = () => {
           const preValue = inputRef.current.value.trim().split("live/");
           const secondPreValue = preValue[1].split("?");
           return secondPreValue[0];
+        } else if (inputRef.current.value.includes("?si=")) {
+          const preValue = inputRef.current.value.trim().split("?si=");
+          return preValue[0];
         } else {
           const preValue = inputRef.current.value.trim().split("/");
           return preValue[3];
