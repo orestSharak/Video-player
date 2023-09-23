@@ -35,7 +35,7 @@ const CreatePlaylist = ({showCreatePlaylist, toggleCreatePlaylist, createTitleRe
               <form onSubmit={(e) => createPlaylist(e)}>
                 <label className="create-playlist-input-label" htmlFor="create-playlist">Add a name for a playlist</label>
                 <input className="create-playlist-input" id="create-playlist" placeholder="Name"
-                       ref={createTitleRef} onChange={changeTitle} value={titleValue} onKeyPress={handleKeyPress}
+                       ref={createTitleRef} onChange={changeTitle} value={titleValue} onKeyDown={handleKeyPress}
                        type="text" autoComplete="off" required/>
                 <span className="name-length-section">{titleValue.length}/35</span>
                 <input className={titleValue.length === 0 ? "submit-button disabled" : "submit-button"} type="submit"

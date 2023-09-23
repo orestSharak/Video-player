@@ -81,7 +81,6 @@ const Page = () => {
                 </Link>
               ))
           )}
-        }
         <li className="play-list-item" onClick={() => setShowTitle(true)}>
         <span className="plus-icon-wrapper">
         <i className="bi bi-plus play-list-icon-plus"/>
