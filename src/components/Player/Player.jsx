@@ -104,7 +104,8 @@ const Player = () => {
           return secondPreValue[0];
         } else if (inputRef.current.value.includes("?si=")) {
           const preValue = inputRef.current.value.trim().split("?si=");
-          return preValue[0];
+          const secondPreValue = preValue[0].split('/');
+          return secondPreValue[3];
         } else {
           const preValue = inputRef.current.value.trim().split("/");
           return preValue[3];
@@ -112,6 +113,7 @@ const Player = () => {
       };
 
       const videoId = inputUrlFormatter();
+
 
       const response = await fetch(
         `https://noembed.com/embed?dataType=json&url=https://www.youtube.com/watch?v=${videoId}`
